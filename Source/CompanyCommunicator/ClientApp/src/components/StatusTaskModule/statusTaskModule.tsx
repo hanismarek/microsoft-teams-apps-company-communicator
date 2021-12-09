@@ -126,6 +126,7 @@ class StatusTaskModule extends React.Component<StatusTaskModuleProps, IStatusSta
             response.data.succeeded = formatNumber(response.data.succeeded);
             response.data.failed = formatNumber(response.data.failed);
             response.data.unknown = response.data.unknown && formatNumber(response.data.unknown);
+            response.data.canDownload = false;
             this.setState({
                 message: response.data
             });
